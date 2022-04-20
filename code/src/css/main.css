@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+  --Anchor-Blue: hsl(228, 45%, 44%);
+  --White: #fff;
+  --Grayish-White: rgba(255, 255, 255, 0.8);
+  --Light-Blue: rgb(210, 210, 211);
+  --Lighter-Blue: rgb(240, 240, 245);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.625rem;
+  min-height: 100vh;
+  background-image: url("../../images/bg-intro-desktop.png"),
+    linear-gradient(to right, #ff7a7a, #ff7a7a);
+  color: var(--White);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 75rem) {
+  body {
+    font-size: 0.45rem;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card {
+  width: 70rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+}
+@media screen and (max-width: 75rem) {
+  .container .card {
+    padding: 1rem;
+    margin: 2.5rem 0;
+    max-width: 18rem;
+    min-width: 18rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container .card-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 75rem) {
+  .container .card-info {
+    width: 100%;
+  }
+}
+.container .card-info__title {
+  font-size: 5em;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 75rem) {
+  .container .card-info__title {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+    font-weight: 600;
+  }
+}
+.container .card-info__summary {
+  font-size: 1.5em;
+  padding-right: 2rem;
+}
+@media screen and (max-width: 75rem) {
+  .container .card-info__summary {
+    padding-right: 0;
+    font-size: 1.75em;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+  }
+}
+.container .card-form {
+  width: 50%;
+}
+@media screen and (max-width: 75rem) {
+  .container .card-form {
+    width: 100%;
+  }
+}
+.container .card-form .try-it-free {
+  color: var(--Grayish-White);
+  width: 100%;
+  background-color: var(--Blue);
+  font-size: 1.5em;
+  text-align: center;
+  padding: 0.75rem 0;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 75rem) {
+  .container .card-form .try-it-free {
+    padding: 0.75rem 3rem;
+    font-size: 1.75em;
+  }
+}
+.container .card-form .try-it-free .highlight {
+  color: var(--White);
+  font-weight: 600;
+}
+.container .card-form__form {
+  background-color: var(--White);
+  padding: 2.25rem;
+  border-radius: 0.75rem;
+}
+@media screen and (max-width: 75rem) {
+  .container .card-form__form {
+    padding: 1.5rem;
+  }
+}
+.container .card-form__form .card-form__form__item {
+  font-family: inherit;
+  width: 100%;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.25rem;
+  border: 1.75px solid var(--Red);
+  /* margin-bottom: 1rem; */
+  font-weight: 600;
+  color: var(--Dark-Blue);
+  background-image: url("../../images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
+
+.container .card-form__form .card-form__form__item[type="email"]::placeholder {
+  color: var(--Red);
+}
+
+@media screen and (max-width: 75rem) {
+  .container .card-form__form .card-form__form__item {
+    padding: 0.75rem 1rem;
+    font-size: 1.65em;
+  }
+}
+
+.container .card-form__form .hiddenSign {
+  background-image: none;
+  margin-bottom: 1rem;
+  border: 1.75px solid var(--Lighter-Blue);
+}
+
+.container .card-form__form .hiddenSign[type="email"]::placeholder {
+  color: #777777;
+}
+
+.container .card-form__form .card-form__form__item-error {
+  color: var(--Red);
+  text-align: right;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.container .card-form__form .hiddenText {
+  display: none;
+}
+
+.container .card-form__form__item:focus {
+  outline: 0;
+  border: 1.75px solid var(--Blue);
+}
+.container .card-form__form__button {
+  font-family: inherit;
+  width: 100%;
+  padding: 0.75rem 0;
+  background-color: var(--Green);
+  color: var(--White);
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px #2aa26e;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 75rem) {
+  .container .card-form__form__button {
+    font-size: 1.4em;
+  }
+}
+.container .card-form__form .tas {
+  font-family: inherit;
+  color: var(--Light-Blue);
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+@media screen and (max-width: 75rem) {
+  .container .card-form__form .tas {
+    font-size: 1.25em;
+    padding: 0 0.47rem;
+  }
+}
+.container .card-form__form .tas .tint {
+  color: var(--Red);
+}
+
+.try-it-free,
+.card-form__form {
+  box-shadow: 0 6.25px rgba(62, 60, 73, 0.25);
+}
