@@ -12,7 +12,6 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -53,3 +52,4 @@ Learnt basic FrontEnd form verifications. Used state to manage all the verificat
 ## Author
 
 - Frontend Mentor - [@Beats-Ayush](https://www.frontendmentor.io/profile/Beats-Ayush)
+- Github - [Beats-Ayush](https://github.com/Beats-Ayush)
